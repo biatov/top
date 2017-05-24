@@ -16,3 +16,15 @@ class HorseRacingItem(scrapy.Item):
 
 class NeedItem(scrapy.Item):
     horse_no = scrapy.Field()
+    plc = scrapy.Field()
+    horse = scrapy.Field()
+    jockey = scrapy.Field()
+    trainer = scrapy.Field()
+    actual_wt = scrapy.Field()
+    declar_horse_wt = scrapy.Field()
+    draw = scrapy.Field()
+    lbw = scrapy.Field()
+    running_position = scrapy.Field()
+    finish_time = scrapy.Field()
+    win_odds = scrapy.Field()
+    date_folder = scrapy.Field()
