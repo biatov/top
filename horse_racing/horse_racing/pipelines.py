@@ -11,8 +11,8 @@ class HorseRacingPipeline(object):
     def __init__(self):
         self.file = csv.writer(open('scrapping_data/items_ch.csv', 'w'), quoting=csv.QUOTE_MINIMAL)
         self.file.writerow(
-            ['date', 'horse_no', 'plc', 'horse', 'jockey', 'trainer', 'actual_wt', 'declar_horse_wt', 'draw', 'lbw',
-             'running_position', 'finish_time', 'win_odds']
+            ['日期', '馬號', '名次', '馬名', '騎師', '練馬師', '實際 負磅', '排位 體重', '檔位', '頭馬 距離',
+             '沿途 走位', '完成 時間', '獨贏 賠率']
         )
 
     def process_item(self, item, spider):
