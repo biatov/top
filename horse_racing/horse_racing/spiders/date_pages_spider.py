@@ -6,7 +6,7 @@ from horse_racing.items import HorseRacingItem
 class DatePagesSpider(scrapy.Spider):
     name = "date_pages"
     allowed_domains = ["racing.hkjc.com"]
-    start_urls = ["http://racing.hkjc.com/racing/Info/meeting/Results/english/Local"]
+    start_urls = ["http://racing.hkjc.com/racing/Info/meeting/Results/chinese/Local"]
 
     def parse(self, response):
         root = Selector(response)

@@ -9,7 +9,7 @@ class RunningSpider(scrapy.Spider):
     allowed_domains = ["racing.hkjc.com"]
 
     try:
-        with open('full_links.json') as f:
+        with open('full_links_ch.json') as f:
             data = json.load(f)
     except FileNotFoundError:
         data = dict()

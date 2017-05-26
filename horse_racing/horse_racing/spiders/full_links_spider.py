@@ -10,15 +10,15 @@ class FullLinksSpider(CrawlSpider):
     allowed_domains = ["racing.hkjc.com"]
 
     try:
-        with open('date_pages.json') as f:
+        with open('date_pages_ch.json') as f:
             paginate = json.load(f)[0]['date_pages']
     except FileNotFoundError:
             paginate = list()
 
-    start_urls = list(map(lambda i: "http://racing.hkjc.com/racing/Info/meeting/Results/english/%s/1" % i, paginate))
+    start_urls = list(map(lambda i: "http://racing.hkjc.com/racing/Info/meeting/Results/chinese/%s/1" % i, paginate))
 
     rules = (
-        Rule(LinkExtractor(allow=(r'/meeting/Results/english/\w+/\d{8}/\w+/\d+')),
+        Rule(LinkExtractor(allow=(r'/meeting/Results/chinese/\w+/\d{8}/\w+/\d+')),
              callback='parse_numeric_pages', follow=True),
     )
 

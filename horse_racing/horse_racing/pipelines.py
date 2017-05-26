@@ -9,7 +9,7 @@ import csv
 
 class HorseRacingPipeline(object):
     def __init__(self):
-        self.file = csv.writer(open('scrapping_data/items.csv', 'w'), quoting=csv.QUOTE_MINIMAL)
+        self.file = csv.writer(open('scrapping_data/items_ch.csv', 'w'), quoting=csv.QUOTE_MINIMAL)
         self.file.writerow(
             ['date', 'horse_no', 'plc', 'horse', 'jockey', 'trainer', 'actual_wt', 'declar_horse_wt', 'draw', 'lbw',
              'running_position', 'finish_time', 'win_odds']
